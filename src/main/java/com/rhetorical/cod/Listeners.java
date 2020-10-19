@@ -66,13 +66,14 @@ public class Listeners implements Listener {
 		}
 	}
 
+	/*
 	@EventHandler
 	public void playerTalkInChat(AsyncPlayerChatEvent e) {
 		Player sender = e.getPlayer();
 		String message = e.getMessage();
 
 		if (GameManager.isInMatch(sender))
-			e.setCancelled(true);
+			e.setCancelled(false);
 
 		if (sender.hasPermission("com.chat") && !sender.isOp())
 			return;
@@ -82,7 +83,7 @@ public class Listeners implements Listener {
 			return;
 		for (Player receiver : match.getPlayers()) {
 
-				ChatColor tColor = ChatColor.GRAY;
+				ChatColor tColor = ChatColor.DARK_AQUA;
 
 				if (receiver.equals(sender)) {
 					tColor = ChatColor.YELLOW;
@@ -112,7 +113,7 @@ public class Listeners implements Listener {
 		}
 
 	}
-	
+	*/
 	@EventHandler
 	public void onBlockBreak(BlockBreakEvent e) {
 		if (GameManager.isInMatch(e.getPlayer())) {
@@ -182,7 +183,7 @@ public class Listeners implements Listener {
 			return;
 		}
 
-		if (cause != DamageCause.ENTITY_ATTACK && cause != DamageCause.ENTITY_EXPLOSION && cause != DamageCause.PROJECTILE) {
+		if (cause != DamageCause.ENTITY_ATTACK && cause != DamageCause.ENTITY_EXPLOSION &&  cause != DamageCause.PROJECTILE) {
 			boolean exists = true;
 			DamageCause damageCause = null;
 			try {

@@ -2452,11 +2452,11 @@ public class GameInstance implements Listener {
 			if (damagers.length != 0) {
 				Player shooter = damagers[0];
 				if (LoadoutManager.getInstance().getActiveLoadout(shooter).hasPerk(Perk.STOPPING_POWER)) {
-					damage *= 1.2d;
+					damage *= 1.1d;
 				}
 
 				if (LoadoutManager.getInstance().getActiveLoadout(victim).hasPerk(Perk.JUGGERNAUT)) {
-					damage /= 1.2d;
+					damage /= 1.1d;
 				}
 			}
 		}
@@ -3269,7 +3269,7 @@ public class GameInstance implements Listener {
 		wolf.setCanPickupItems(false);
 		wolf.setCustomName(owner.getDisplayName() + "'s Dog");
 		wolf.setCustomNameVisible(true);
-		wolf.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 20 * 20, 2));
+		//wolf.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 20 * 20, 2));
 
 		wolves[i] = wolf;
 	}
