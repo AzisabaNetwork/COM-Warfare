@@ -58,7 +58,7 @@ public class HealthManager {
 		if (p.hasPotionEffect(PotionEffectType.DAMAGE_RESISTANCE)) return;
 
 		if (inJuggernaut.contains(p))
-			damage /= 3;
+			damage /= 2;
 
 		double health = getHealth(p) - damage;
 		
