@@ -1860,8 +1860,7 @@ public class GameInstance implements Listener {
 					p.setGameMode(GameMode.SPECTATOR);
 					p.setSpectatorTarget(killer);
 
-					if (t == 3)
-						ComWarfare.sendTitle(p, Lang.YOU_WILL_RESPAWN.getMessage().replace("{time}", t + ""), "");
+					ComWarfare.sendTitle(p, Lang.YOU_WILL_RESPAWN.getMessage().replace("{time}", t + ""), "");
 				} else {
 					if (getState() == GameState.IN_GAME) {
 						if (getGamemode() != Gamemode.FFA && getGamemode() != Gamemode.OITC && getGamemode() != Gamemode.GUN) {
@@ -2431,7 +2430,8 @@ public class GameInstance implements Listener {
 	}
 
 	public boolean isInvulnerable(Player p) {
-		return p.hasPotionEffect(PotionEffectType.DAMAGE_RESISTANCE);
+		return false;
+		// return p.hasPotionEffect(PotionEffectType.DAMAGE_RESISTANCE);
 	}
 
 	/**
