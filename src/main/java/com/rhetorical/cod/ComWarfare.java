@@ -135,11 +135,11 @@ public class ComWarfare extends JavaPlugin {
 			return;
 
 		instance = this;
-
+		
 		getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
 
 		getCommand("cod").setExecutor(new CodCommand());
-    	getCommand("cod").setTabCompleter(new CodTabCompleter());
+		getCommand("cod").setTabCompleter(new CodTabCompleter());
 
 		hasQA = Bukkit.getServer().getPluginManager().getPlugin("QualityArmory") != null;
 		hasCS = Bukkit.getServer().getPluginManager().getPlugin("CrackShot") != null;
@@ -364,7 +364,7 @@ public class ComWarfare extends JavaPlugin {
 	 * @param inGame = Whether not the command can be used in game
 	 * @return Returns true if the given command sender has the permission node, the permission node "com.*", or if they're a server operator.
 	 * */
-	static boolean hasPerm(CommandSender p, String s, boolean inGame) {
+	public static boolean hasPerm(CommandSender p, String s, boolean inGame) {
 
 		if (p.hasPermission(s) || p.hasPermission("com.*") || p instanceof ConsoleCommandSender || p.isOp()) {
 			if (p instanceof Player) {
