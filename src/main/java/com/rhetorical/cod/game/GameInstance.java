@@ -714,7 +714,7 @@ public class GameInstance implements Listener {
 		}
 
 		if (ComWarfare.isSpawnProtection())
-			p.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, ComWarfare.getSpawnProtectionDuration() * 20, 1));
+			p.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, ComWarfare.getSpawnProtectionDuration() * 20, 4));
 
 		p.getInventory().setItem(32, InventoryManager.getInstance().selectClass);
 		p.getInventory().setItem(35, InventoryManager.getInstance().leaveItem);
@@ -2349,7 +2349,7 @@ public class GameInstance implements Listener {
 
 		double scalar = (20d / ComWarfare.getDefaultHealth()) * 0.4d;
 		double damage = e.getDamage() * scalar;
-		damage /= 2;
+		//damage /= 2;
 
 		for (Player p : dogsScoreStreak.keySet()) {
 			if (p.equals(damager)) {
@@ -2430,8 +2430,7 @@ public class GameInstance implements Listener {
 	}
 
 	public boolean isInvulnerable(Player p) {
-		return false;
-		// return p.hasPotionEffect(PotionEffectType.DAMAGE_RESISTANCE);
+		return p.hasPotionEffect(PotionEffectType.DAMAGE_RESISTANCE);
 	}
 
 	/**
