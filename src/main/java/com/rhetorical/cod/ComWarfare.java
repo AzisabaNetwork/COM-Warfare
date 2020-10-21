@@ -368,14 +368,14 @@ public class ComWarfare extends JavaPlugin {
 			if (p instanceof Player) {
 				if (GameManager.isInMatch((Player) p)) {
 					if (!inGame){
-						sendMessage(p, ComWarfare.getPrefix() + Lang.NOT_ALLOWED_IN_GAME.getMessage(), getLang());
+						// sendMessage(p, ComWarfare.getPrefix() + Lang.NOT_ALLOWED_IN_GAME.getMessage(), getLang());
 						return false;
 					}
 				}
 			}
 			return true;
 		} else {
-			sendMessage(p, ComWarfare.getPrefix() + Lang.NO_PERMISSION.getMessage(), getLang());
+			// sendMessage(p, ComWarfare.getPrefix() + Lang.NO_PERMISSION.getMessage(), getLang());
 			return false;
 		}
 	}
