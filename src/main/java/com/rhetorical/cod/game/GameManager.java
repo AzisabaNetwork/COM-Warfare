@@ -266,6 +266,8 @@ public class GameManager {
 				out.writeUTF("Connect");
 				out.writeUTF(ComWarfare.getInstance().getLobbyServer());
 				p.sendPluginMessage(ComWarfare.getInstance(), "BungeeCord", out.toByteArray());
+
+
 			} catch (Exception e) {
 				p.kickPlayer("");
 			}
