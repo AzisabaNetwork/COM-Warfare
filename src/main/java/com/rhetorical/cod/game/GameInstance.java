@@ -1505,16 +1505,22 @@ public class GameInstance implements Listener {
 				if (t == 0) {
 
 					if (getGamemode() == Gamemode.RESCUE || getGamemode() == Gamemode.GUNFIGHT) {
-						if (getAlivePlayers(redTeam) > getAlivePlayers(blueTeam)) {
+						if (getAlivePlayers(redTeam) < getAlivePlayers(blueTeam)) {
 							addBluePoint();
 
 							if (getGamemode() == Gamemode.RESCUE) {
 								if (!(blueTeamScore >= maxScore_RESCUE))
 									startNewRound(7, blueTeam);
+								else{
+									stopGame();
+								}
 							}
 							else if (getGamemode() == Gamemode.GUNFIGHT) {
 								if (!(blueTeamScore >= maxScore_GUNFIGHT))
 									startNewRound(7, blueTeam);
+								else{
+									stopGame();
+								}
 							}
 
 							for (Player pp : players) {
@@ -1530,9 +1536,15 @@ public class GameInstance implements Listener {
 							if (getGamemode() == Gamemode.RESCUE) {
 								if (!(redTeamScore >= maxScore_RESCUE))
 									startNewRound(7, redTeam);
+								else{
+									stopGame();
+								}
 							} else if (getGamemode() == Gamemode.GUNFIGHT) {
 								if (!(redTeamScore >= maxScore_GUNFIGHT))
 									startNewRound(7, redTeam);
+								else{
+									stopGame();
+								}
 							}
 
 							for (Player pp : players) {
