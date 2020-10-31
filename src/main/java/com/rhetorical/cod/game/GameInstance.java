@@ -892,9 +892,6 @@ public class GameInstance implements Listener {
 					if (blueTeam.contains(p) || redTeam.contains(p))
 						continue;
 
-					ChatColor tColor;
-					String team;
-
 					// PLS = Power Level Sum
 					double redPLS = 0;
 					double bluePLS = 0;
